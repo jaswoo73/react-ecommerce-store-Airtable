@@ -1,21 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import { services } from "../utils/constants";
+import serviceImg from "../assets/serviceImg.jpg";
 
 const Services = () => {
   return (
     <Wrapper>
       <div className="section-center">
         <article className="header">
-          <h3>
-            custom furniture <br />
-            built only for you
-          </h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
-            aperiam? Optio aut ex, iste quia illo commodi quibusdam expedita
-            iusto!
-          </p>
+          <h3>IN THE GRIM DARKNESS OF THE FAR FUTURE, THERE IS ONLY WAR.</h3>
         </article>
         <div className="services-center">
           {services.map((service) => {
@@ -35,15 +28,17 @@ const Services = () => {
 };
 
 const Wrapper = styled.section`
+  background: url(${serviceImg}) center/cover no-repeat;
+  padding: 5rem 0;
+  width: 100vw;
+
   h3,
   h4 {
-    color: var(--clr-primary-1);
+    color: var(--clr-white);
   }
-  padding: 5rem 0;
-
-  background: var(--clr-primary-10);
 
   .header h3 {
+    font-size: 2rem;
     margin-bottom: 2rem;
   }
   p {
@@ -57,12 +52,13 @@ const Wrapper = styled.section`
     gap: 2.5rem;
   }
   .service {
-    background: var(--clr-primary-7);
+    background: rgba(200, 229, 255, 0.2);
+    backdrop-filter: blur(10px);
     text-align: center;
     padding: 2.5rem 2rem;
     border-radius: var(--radius);
     p {
-      color: var(--clr-primary-2);
+      color: var(--clr-white);
     }
   }
   span {
@@ -80,9 +76,9 @@ const Wrapper = styled.section`
     }
   }
   @media (min-width: 992px) {
+    height: 100vh;
     .header {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      font-size: 3rem;
     }
   }
   @media (min-width: 576px) {

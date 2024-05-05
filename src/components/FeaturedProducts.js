@@ -5,6 +5,7 @@ import styled from "styled-components";
 import Error from "./Error";
 import Loading from "./Loading";
 import Product from "./Product";
+import serviceImg from "../assets/serviceImg.jpg";
 
 const FeaturedProducts = () => {
   const {
@@ -52,7 +53,16 @@ const Wrapper = styled.section`
     width: 148px;
     margin: 0 auto;
     text-align: center;
+    transition: all 0.3s linear;
   }
+
+  .btn:hover {
+    background: url(${serviceImg}) center/cover;
+    transition: all 0.1s linear;
+    color: white;
+    font-weight: bolder;
+  }
+
   @media (min-width: 576px) {
     .featured {
       grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));

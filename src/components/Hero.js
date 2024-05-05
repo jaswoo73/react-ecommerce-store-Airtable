@@ -1,39 +1,62 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import heroBcg from "../assets/hero-warhmmer-5.webp";
-import heroBcg2 from "../assets/hero-warhmmer-6.webp";
+import video from "../assets/WarhammerVideo.mp4";
 
 const Hero = () => {
   return (
     <Wrapper className="section-center">
+      <video className="video-container" autoPlay muted loop>
+        <source src={video} type="video/mp4" />
+      </video>
       <article className="content">
         <h1>
-          WARHAMMER <br />
-          40,000
+          WELCOME TO <br />
+          TOYBOY
         </h1>
-        <p>
-          Discover Comfort and Style at Comfy Sloth - Elevate Your Space with
-          Handcrafted Furniture Delivered to Your Doorstep!
-        </p>
         <Link to="/products" className="btn hero-btn">
           shop now
         </Link>
       </article>
-      <article className="img-container">
+      {/* <article className="img-container">
         <img src={heroBcg} alt="nice table" className="main-img" />
         <img src={heroBcg2} alt="staff working" className="accent-img" />
-      </article>
+      </article> */}
     </Wrapper>
   );
 };
 
 const Wrapper = styled.section`
   min-height: 60vh;
+  position: relative;
   display: grid;
   place-items: center;
-  .img-container {
-    display: none;
+  position: relative;
+
+  .video-container {
+    border-radius: 5px;
+    position: absolute;
+    width: 90vw;
+    height: 90%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .content {
+    color: var(--clr-grey-7);
+    position: absolute;
+    z-index: 1;
+    bottom: 15%;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: start;
+
+    h1 {
+      margin-bottom: 0;
+      font-size: 2rem;
+    }
   }
 
   p {
@@ -53,6 +76,19 @@ const Wrapper = styled.section`
     }
     p {
       font-size: 1.25rem;
+    }
+    .video-container {
+      object-fit: cover;
+      width: 100vw;
+      height: calc(100vh - 5rem);
+    }
+    .content {
+      bottom: 5%;
+      left: -5%;
+      gap: 20px;
+      h1 {
+        font-size: 4rem;
+      }
     }
     .hero-btn {
       padding: 0.75rem 1.5rem;

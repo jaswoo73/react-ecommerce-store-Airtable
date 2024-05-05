@@ -25,6 +25,7 @@ const Wrapper = styled.main`
   padding: 5rem 0;
   h1 {
     font-size: 10rem;
+    margin-bottom: 2rem;
   }
   h3 {
     text-transform: none;

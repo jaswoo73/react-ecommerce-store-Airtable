@@ -7,6 +7,7 @@ import { links } from "../utils/constants";
 import styled from "styled-components";
 import CartButtons from "./CartButtons";
 import { useUserContext } from "../context/user_context";
+import serviceImg from "../assets/serviceImg.jpg";
 
 const Sidebar = () => {
   const { isSidebarOpen, closeSidebar } = useProductsContext();
@@ -71,6 +72,12 @@ const SidebarContainer = styled.div`
   }
   .links {
     margin-bottom: 2rem;
+    li {
+      font-family: "Jacquard 24";
+      a {
+        font-size: 1.5rem;
+      }
+    }
   }
   .links a {
     display: block;
@@ -79,15 +86,15 @@ const SidebarContainer = styled.div`
     text-transform: capitalize;
     padding: 1rem 1.5rem;
     color: var(--clr-grey-3);
-    transition: var(--transition);
+    transition: all 0.3s ease;
     letter-spacing: var(--spacing);
   }
 
   .links a:hover {
     padding: 1rem 1.5rem;
     padding-left: 3rem;
-    background: var(--clr-grey-10);
-    color: var(--clr-grey-2);
+    background: url(${serviceImg}) center/cover;
+    color: var(--clr-white);
   }
 
   .sidebar {

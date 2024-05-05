@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { useProductsContext } from "../context/products_context";
 import { useCartContext } from "../context/cart_context";
 import { useUserContext } from "../context/user_context";
+import loginImg from "../assets/login.png";
 
 const CartButtons = () => {
   const { closeSidebar } = useProductsContext();
@@ -35,7 +36,14 @@ const CartButtons = () => {
         </button>
       ) : (
         <button type="button" className="auth-btn" onClick={loginWithRedirect}>
-          Login <FaUserPlus />
+          Login{" "}
+          <img
+            src={loginImg}
+            alt="login"
+            height={32}
+            width={32}
+            style={{ marginLeft: "5px" }}
+          />
         </button>
       )}
     </Wrapper>
@@ -47,7 +55,7 @@ const Wrapper = styled.div`
   grid-template-columns: 1fr 1fr;
   align-items: center;
   width: 225px;
-
+  font-family: "Jacquard 24";
   .cart-btn {
     color: var(--clr-grey-1);
     font-size: 1.5rem;
@@ -76,6 +84,7 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
     border-radius: 50%;
     font-size: 0.75rem;
     color: var(--clr-white);

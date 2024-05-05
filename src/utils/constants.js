@@ -23,19 +23,19 @@ export const services = [
     id: 1,
     icon: <GiCompass />,
     title: "mission",
-    text: "At Comfy Sloth, we strive to provide unparalleled comfort and style through thoughtfully designed furniture, ensuring every customer finds joy in their unique living space.",
+    text: "At Toyboy, we're on a mission to bring the thrilling universe of Warhammer 40,000 to life through our thoughtfully curated selection of merchandise. We're dedicated to providing enthusiasts with top-quality products that blend comfort and style, ensuring that every customer finds joy in their gaming experience.",
   },
   {
     id: 2,
     icon: <GiDiamondHard />,
     title: "vision",
-    text: "Our vision is to create a world where individuals can effortlessly enhance their homes with high-quality, customizable furniture, making comfort and personal expression accessible to all.",
+    text: "Our vision at Toyboy is to become the go-to destination for Warhammer 40,000 fans, offering an unparalleled customer service and a vibrant community hub. We aspire to be recognized for our commitment to quality, customer satisfaction, and our passion for all things Warhammer 40k.",
   },
   {
     id: 3,
     icon: <GiStabbedNote />,
     title: "history",
-    text: "Founded with a passion for craftsmanship, innovation, and customer delight, Comfy Sloth has evolved into a reputable source for exceptional furniture. Our journey is marked by a commitment to quality, transforming houses into havens since our inception.",
+    text: "Founded with a passion for Warhammer 40,000, Toyboy has evolved into a reputable source for exceptional Warhammer 40,000 products. Our journey is marked by a commitment to customer service and quality assurance, transforming your collection into powerful army since our inception.",
   },
 ];
 

@@ -74,6 +74,12 @@ const NavContainer = styled.nav`
   }
   .nav-links {
     display: none;
+    li {
+      font-family: "Jacquard 24";
+      a {
+        font-size: 1.5rem;
+      }
+    }
   }
   .cart-btn-wrapper {
     display: none;

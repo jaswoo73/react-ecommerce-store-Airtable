@@ -11,15 +11,27 @@ const AboutPage = () => {
         <img src={aboutImg} alt="nice desk" />
         <article>
           <div className="title">
-            <h2>our story</h2>
-            <div className="underline"></div>
-            <p>
-              Indulge in the allure of Comfy Sloth's handcrafted furniture—where
-              style meets comfort. Browse our curated selection, bringing the
-              ease of buying exquisite pieces right to the palm of your hand.
-              Elevate your space effortlessly with quality delivered to your
-              doorstep.
-            </p>
+            <article>
+              <h2>About Us:</h2>
+              <div className="underline"></div>
+              <p>
+                Toyboy is your ultimate destination for all things Warhammer
+                40k. From meticulously crafted miniatures to awe-inspiring
+                collectibles, we're here to fuel your passion for the grim
+                darkness of the far future. Explore our vast selection and
+                immerse yourself in the epic universe of Warhammer 40,000.
+                Welcome to Toyboy – where adventure awaits!
+              </p>
+            </article>
+            <article>
+              <h2> Contact Us:</h2>
+              <div className="underline"></div>
+              <ul>
+                <li>Email: contact@toyboy.com</li>
+                <li>Phone: +603-32130231</li>
+                <li>Address: 123 Warhammer Way, Sector 40k, Toyboy City</li>
+              </ul>
+            </article>
           </div>
         </article>
       </Wrapper>
@@ -35,7 +47,7 @@ const Wrapper = styled.section`
     width: 100%;
     display: block;
     border-radius: var(--radius);
-    height: 300px;
+    height: 400px;
     object-fit: cover;
     object-position: top;
   }
@@ -48,9 +60,18 @@ const Wrapper = styled.section`
   }
   .title {
     text-align: left;
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 2rem;
   }
   .underline {
     margin-left: 0;
+  }
+  ul {
+    margin-top: 2rem;
+    li {
+      margin-top: 1rem;
+    }
   }
   @media (min-width: 992px) {
     grid-template-columns: 1fr 1fr;

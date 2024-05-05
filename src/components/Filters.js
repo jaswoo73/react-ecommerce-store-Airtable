@@ -56,7 +56,7 @@ const Filters = () => {
                     onClick={updateFilters}
                     name="category"
                     className={`category-btn ${
-                      category === cat.toLowerCase() ? "cat-active" : null
+                      category === cat ? "cat-active" : null
                     }`}
                   >
                     {cat}

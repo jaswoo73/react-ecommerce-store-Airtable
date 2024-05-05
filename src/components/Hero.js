@@ -1,14 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import video from "../assets/WarhammerVideo.mp4";
+import { IoMdVolumeOff, IoMdVolumeHigh } from "react-icons/io";
 
 const Hero = () => {
+  const [muted, setMuted] = useState(true);
   return (
     <Wrapper className="section-center">
-      <video className="video-container" autoPlay muted loop>
+      <video className="video-container" autoPlay muted={muted} loop>
         <source src={video} type="video/mp4" />
       </video>
+      <div className="mute-btn">
+        {!muted ? (
+          <IoMdVolumeHigh onClick={() => setMuted(!muted)} />
+        ) : (
+          <IoMdVolumeOff onClick={() => setMuted(!muted)} />
+        )}
+      </div>
       <article className="content">
         <h1>
           WELCOME TO <br />
@@ -42,6 +51,21 @@ const Wrapper = styled.section`
     z-index: -1;
   }
 
+  .mute-btn {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    top: 10%;
+    left: 5%;
+    font-size: 2rem;
+    transition: var(--transition);
+  }
+
+  .mute-btn:hover {
+    scale: 1.2;
+    color: white;
+  }
+
   .content {
     color: var(--clr-grey-7);
     position: absolute;
@@ -66,6 +90,7 @@ const Wrapper = styled.section`
     color: var(--clr-grey-5);
     font-size: 1rem;
   }
+
   @media (min-width: 992px) {
     height: calc(100vh - 5rem);
     grid-template-columns: 1fr 1fr;
@@ -73,6 +98,10 @@ const Wrapper = styled.section`
     h1 {
       margin-bottom: 2rem;
       line-height: 1.2;
+    }
+    .mute-btn {
+      top: 5%;
+      left: 0;
     }
     p {
       font-size: 1.25rem;
@@ -129,6 +158,12 @@ const Wrapper = styled.section`
       bottom: 35%;
       left: -8%;
       border-radius: var(--radius);
+    }
+  }
+
+  @media (min-width: 1250px) {
+    .mute-btn {
+      left: -5%;
     }
   }
 `;

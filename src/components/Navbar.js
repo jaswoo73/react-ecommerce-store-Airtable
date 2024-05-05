@@ -80,6 +80,11 @@ const NavContainer = styled.nav`
         font-size: 1.5rem;
       }
     }
+
+    li:hover {
+      scale: 1.1;
+      transition: var(--transition);
+    }
   }
   .cart-btn-wrapper {
     display: none;
